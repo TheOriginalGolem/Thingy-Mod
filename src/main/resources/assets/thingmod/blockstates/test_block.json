@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "thingmod:block/test_block" }
+  }
+}

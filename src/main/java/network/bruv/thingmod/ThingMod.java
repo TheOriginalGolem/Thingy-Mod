@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import network.bruv.thingmod.block.ModBlocks;
 import network.bruv.thingmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -23,7 +24,10 @@ public class ThingMod {
     public ThingMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //Calls to register items
         ModItems.register(modEventBus);
+        //Calls to register blocks
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

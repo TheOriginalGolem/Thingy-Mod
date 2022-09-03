@@ -1,0 +1,10 @@
+{
+
+  "item.thingmod.testitem": "Test Item",
+  "item.thingmod.testitem2": "Test Item 2: Electric Boogaloo",
+
+  "block.thingmod.test_block": "Test Block",
+  "block.thingmod.test_block2": "Test Block 2 with Experience",
+
+  "itemGroup.thingmodtab": "Thing Mod Tab"
+}
