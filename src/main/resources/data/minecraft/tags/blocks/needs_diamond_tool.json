@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "thingmod:test_block",
+    "thingmod:test_block2"
+  ]
+}
