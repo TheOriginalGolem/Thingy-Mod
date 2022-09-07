@@ -1,5 +1,6 @@
 package network.bruv.thingmod.block;
 
+import com.mojang.logging.LogUtils;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -13,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import network.bruv.thingmod.ThingMod;
+import network.bruv.thingmod.block.custom.FancyBlock;
 import network.bruv.thingmod.item.ModCreativeModeTab;
 import network.bruv.thingmod.item.ModItems;
 
@@ -36,11 +38,18 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops(), UniformInt.of(3,7)),
             ModCreativeModeTab.THINGMOD_TAB);
 
+    public static final RegistryObject<Block> FANCYBLOCK = registerBlock("fancyblock",
+            () -> new FancyBlock(BlockBehaviour
+                    .Properties.of(Material.AMETHYST)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()),
+            ModCreativeModeTab.THINGMOD_TAB);
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
+        //LogUtils.getLogger().info("Registering "+name);
         return toReturn;
     }
 

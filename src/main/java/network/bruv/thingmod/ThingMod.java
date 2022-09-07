@@ -17,6 +17,7 @@ import org.slf4j.Logger;
 public class ThingMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "thingmod";
+
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
